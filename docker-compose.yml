@@ -1,0 +1,13 @@
+services:
+  element-web:
+    image: ghcr.io/element-hq/element-web:v1.12.22
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:18081:80"
+
+    volumes:
+      - ./config/element-web/config.json:/app/config.json:ro
+
+    security_opt:
+      - no-new-privileges:true
