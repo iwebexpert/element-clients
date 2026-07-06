@@ -1,5 +1,4 @@
 services:
-  # Element Web
   element-web:
     image: ghcr.io/element-hq/element-web:v1.12.22
     restart: unless-stopped
@@ -9,20 +8,6 @@ services:
 
     volumes:
       - ./config/element-web/config.json:/app/config.json:ro
-
-    security_opt:
-      - no-new-privileges:true
-
-  # Element Call
-  element-call:
-    image: ghcr.io/element-hq/element-call:v0.20.3
-    restart: unless-stopped
-
-    ports:
-      - "127.0.0.1:18082:8080"
-
-    volumes:
-      - ./config/element-call/config.json:/app/config.json:ro
 
     security_opt:
       - no-new-privileges:true
