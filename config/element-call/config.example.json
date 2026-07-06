@@ -1,0 +1,32 @@
+{
+  "default_server_config": {
+    "m.homeserver": {
+      "base_url": "https://REPLACE_WITH_MATRIX_DOMAIN",
+      "server_name": "REPLACE_WITH_MATRIX_DOMAIN"
+    }
+  },
+
+  "livekit": {
+    "livekit_service_url": "https://REPLACE_WITH_LIVEKIT_SERVICE_DOMAIN"
+  },
+
+  "features": {
+    "feature_use_device_session_member_events": true,
+    "feature_group_calls_without_video_and_audio": true
+  },
+
+  "media_devices": {
+    "enable_audio": true,
+    "enable_video": false
+  },
+
+  "matrix_rtc_mode": "compatibility",
+
+  "matrix_rtc_session": {
+    "wait_for_key_rotation_ms": 3000,
+    "membership_event_expiry_ms": 180000000,
+    "delayed_leave_event_delay_ms": 18000,
+    "delayed_leave_event_restart_ms": 4000,
+    "network_error_retry_ms": 100
+  }
+}
